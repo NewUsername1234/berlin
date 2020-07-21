@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #cccccc;
+    position: relative;
+}
+
+header {
+    height: 80px;
+}
+
+nav {
+    position: fixed;
+    z-index: 4;
+    width: 100%; 
+}
+
+nav ul {
+    height: 80px;
+    list-style: none;
+    background-color: white;
+}
+
+nav ul li {
+    height: 100%;
+    float: left;
+}
+
+nav ul li + li {
+    height: 100%;
+    float: right;
+    margin-right: 15px;
+}
+
+
+nav img {
+    height: 100%;
+} 
+
+.banner {
+    position: relative;
+    width: 100%;
+}
+
+.banner .dimmer {
+     background-color: black;
+     opacity: 0.6;
+     position: absolute;
+     top: 0;
+     width: 100%;
+     z-index: 1;
+}
+ 
+.banner .dimmer img {
+     opacity: 0;
+     width: 99.7%; /* why is that one bigger ? */
+}
+
+.banner img {
+    width: 100%;
+}
+
+.banner .front-wrapper {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(0, -50%);
+    z-index: 2;
+
+}
+
+.banner .front-wrapper h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.banner .front-wrapper a {
+    background-color: gold;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 2px 80px;
+    color: chocolate;
+    border: 2px solid chocolate;
+    border-radius: 50px;
+}
+
+.attributes {
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.attributes .attribute {
+    display: inline-block;
+    width: 45%;
+    margin-bottom: 20px;
+}
+
+.attributes img{ 
+    height: 64px;
+    width: 28%;
+}
+
+.attributes .text {
+    text-align: left;
+    display: inline-block;
+    width: 70%;
+    vertical-align: top;
+}
+
+
+
+footer {
+    background-color: #666666;
+    padding: 15px 60px;
+    color: rgb(210, 210, 210);
+    font-size: 1rem;
+}
+
+footer i {
+    margin-right: 3px;
+}
+
+footer p {
+    display: inline-block;
+}
+
+footer p span {
+    font-size: 0.7rem;
+}
+
+
+@media only screen and (max-width: 767px){
+
+    .banner .front-wrapper {
+        top: 60%;   
+    }
+
+    .banner .front-wrapper h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .banner .front-wrapper a {
+        font-size: 1rem;
+    }
+
+    .attributes .attribute {
+        width: 100%;
+    }
+}
